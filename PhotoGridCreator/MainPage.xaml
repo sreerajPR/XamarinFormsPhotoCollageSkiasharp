@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    x:Class="PhotoGridCreator.MainPage">
+    <ScrollView>
+        <StackLayout Spacing="20" Padding="60,20">
+            <Label
+                Text="Upload upto 9 images and share a simple photo collage with them."
+                HorizontalTextAlignment="Center"/>
+            <Button
+                Text="Reset Photos"
+                Clicked="ResetPhotos_Clicked"
+                BackgroundColor="DeepSkyBlue"
+                TextColor="White"/>
+            <Button
+                Text="Add Photo"
+                Clicked="PickPhoto_Clicked"
+                BackgroundColor="DeepSkyBlue"
+                TextColor="White"/>
+            <Image
+                Source="{Binding GridImageSource}"/>
+            <Button
+                IsVisible="{Binding PhotosSelected}"
+                Text="Share Collaged Image"
+                Clicked="SharePhoto_Clicked"
+                BackgroundColor="DeepSkyBlue"
+                TextColor="White"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
